@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Kundalini Hoodie</title>
+<title>glohood</title>
 <meta name="description" content="A hoodie that guides your breath with light, sound and gentle vibration, from root to crown.">
-<meta property="og:title" content="The Kundalini Hoodie: Crown to Root">
+<meta property="og:title" content="glohood: wear your glow">
 <meta property="og:description" content="Seven glowing pads. Healing tones. One breath that carries light from root to crown.">
-<meta property="og:image" content="https://nomadishere.github.io/kundalini-hoodie/front.jpg">
+<meta property="og:image" content="https://glohood.com/c-midnight.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Carlito:wght@400;700&family=Nunito:wght@900&display=swap" rel="stylesheet">
 <style>
 :root{
   --pink:#DA34C9; --pink-deep:#B5229F;
@@ -45,7 +45,8 @@ section{padding:64px 0}
 /* nav */
 nav{position:sticky;top:0;z-index:10;background:rgba(251,239,243,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1.5px solid var(--teal)}
 nav .wrap{display:flex;align-items:center;gap:12px;min-height:60px}
-nav img{width:30px}
+.logo{font-family:"Nunito",var(--body);font-weight:900;font-size:30px;letter-spacing:-.02em;color:var(--ink);line-height:1}
+.logo .o{color:#B98BFF;text-shadow:0 0 12px rgba(185,139,255,.9)}
 .word{letter-spacing:.3em;font-size:12px;color:var(--pink);font-weight:700;white-space:nowrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:var(--body)}
 .btn-pink{background:var(--pink);color:#fff;box-shadow:0 8px 24px rgba(218,52,201,.28)}
@@ -87,6 +88,10 @@ figure{margin:0;display:flex;flex-direction:column;gap:8px}
 figure img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:16px;border:1.5px solid var(--teal)}
 figcaption{font-size:15px;color:var(--muted)}
 
+.colors{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.colors img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1.5px solid var(--teal)}
+.colors figcaption{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);font-size:16px}
+.sw{width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(0,0,0,.25);flex:none}
 /* session steps */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
 .steps li{counter-increment:s;background:var(--card);border:1.5px solid var(--teal);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px;font-size:16px;color:var(--muted)}
@@ -133,6 +138,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 @media (max-width:900px){
   .steps{grid-template-columns:1fr 1fr}
   .gallery{grid-template-columns:1fr 1fr}
+  .colors{grid-template-columns:repeat(3,1fr)}
   .mats{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
@@ -141,6 +147,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
   .hero-img{order:-1}
   .film video{max-width:420px;margin:0 auto}
   .three,.mats{grid-template-columns:1fr}
+  .colors{grid-template-columns:1fr 1fr}
   .word{display:none}
 }
 @media (max-width:420px){
@@ -153,8 +160,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 <nav aria-label="Main">
   <div class="wrap">
-    <img src="little-deer-mark.png" alt="Little Deer">
-    <span class="word">LITTLE DEER LODGE</span>
+    <span class="logo">gl<span class="o">o</span>hood</span>
     <a class="btn btn-pink" href="#reserve">Join the waitlist</a>
   </div>
 </nav>
@@ -162,7 +168,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">The Kundalini Hoodie · Crown to Root</span>
+      <span class="eyebrow">glohood · Crown to Root</span>
       <h1>Wear the breath that lights you up.</h1>
       <p class="lead">Seven glowing pads, healing tones and a gentle hum guide one sacred breath from the base of your spine to the crown of your head, and back into your heart.</p>
       <div class="chips">
@@ -178,14 +184,14 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       <p class="price-note"><strong>$179 founding price</strong> for the waitlist · $249 at launch</p>
     </div>
     <div class="hero-img">
-      <img src="front.jpg" alt="Seraphine meditating in the Kundalini Hoodie, pads glowing in chakra colors">
+      <img src="c-midnight.jpg" alt="Seraphine meditating in the Midnight glohood, pads glowing in chakra colors">
     </div>
   </div>
 </header>
 
 <section class="film" id="film">
   <div class="wrap">
-    <video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" aria-label="The Kundalini Hoodie film, 27 seconds"></video>
+    <video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" aria-label="glohood film, 27 seconds"></video>
     <div>
       <div class="sec-head">
         <span class="eyebrow" style="color:#F5E9EF">The film · 27 seconds · sound on</span>
@@ -219,6 +225,23 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
         <h3>Hum</h3>
         <p>Each pad vibrates softly at its own pitch while the matching tone plays in any headphones you already own.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="colors">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Five colors</span>
+      <h2>Pick your glow.</h2>
+      <p>Every color has the same seven pads, quartz third eye and amethyst crown, with a small glohood stitched on the chest.</p>
+    </div>
+    <div class="colors">
+      <figure><img src="c-midnight.jpg" alt="Midnight glohood"><figcaption><span class="sw" style="background:#16131A"></span>Midnight</figcaption></figure>
+      <figure><img src="c-blush.jpg" alt="Blush glohood"><figcaption><span class="sw" style="background:#E7B9B6"></span>Blush</figcaption></figure>
+      <figure><img src="c-lavender.jpg" alt="Lavender glohood"><figcaption><span class="sw" style="background:#D9C6E8"></span>Lavender</figcaption></figure>
+      <figure><img src="c-sage.jpg" alt="Sage glohood"><figcaption><span class="sw" style="background:#A9BFA0"></span>Sage</figcaption></figure>
+      <figure><img src="c-bone.jpg" alt="Bone glohood"><figcaption><span class="sw" style="background:#EFE6D6"></span>Bone</figcaption></figure>
     </div>
   </div>
 </section>
@@ -297,7 +320,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       <div><span class="big">$179</span><span class="strike">$249</span></div>
       <p style="color:var(--ink)">Join the waitlist to lock in the founding price when the first run opens.</p>
       <ul class="ticks">
-        <li>The Kundalini Hoodie with all seven pads, crown and crystal</li>
+        <li>Your glohood in any of five colors, with all seven pads, crown and crystal</li>
         <li>The companion app with guided breath sessions</li>
         <li>First access when the first run opens</li>
       </ul>
@@ -310,7 +333,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
         <button class="btn btn-pink" type="submit" id="wl-btn">Save my spot</button>
         <p class="msg" id="wl-msg" role="status"></p>
       </form>
-      <p style="font-size:14px;color:var(--muted)">No payment now. We'll only email you about the hoodie.</p>
+      <p style="font-size:14px;color:var(--muted)">No payment now. We'll only email you about glohood.</p>
     </div>
   </div>
 </section>
@@ -327,7 +350,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 <footer>
   <div class="wrap">
-    <p>The Kundalini Hoodie is a Little Deer Lodge concept. Prepare. Awaken. Integrate.</p>
+    <p>glohood is a Little Deer Lodge creation. Prepare. Awaken. Integrate.</p>
     <p>Photos and film are AI concept renders; Seraphine is an AI character. Wellness product only, not a medical device.</p>
   </div>
 </footer>

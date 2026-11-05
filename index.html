@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kundalini Hoodie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#DA34C9;
+  --teal:#40E0D0;
+  --ink:#3A2E36;
+  --muted:#7A6872;
+  --card:#FFFAF8;
+  --bg1:#FBEFF3; --bg2:#FAEBDD;
+  --display:"Lora", Georgia, "Times New Roman", serif;
+  --body:"Carlito", Calibri, "Segoe UI", Arial, sans-serif;
+  color-scheme: light;
+  /* layout: one narrow reading column; film first, then photos, then the spec sheet as cards */
+}
+*{box-sizing:border-box}
+html{background:var(--bg1)}
+body{margin:0;font-family:var(--body);color:var(--ink);font-size:17px;line-height:1.55;
+  background:linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;}
+.wrap{max-width:860px;margin:0 auto;padding:28px 18px 56px;display:flex;flex-direction:column;gap:34px}
+header{display:flex;align-items:center;gap:14px;border-bottom:1.5px solid var(--teal);padding-bottom:14px}
+header img{width:40px;height:auto}
+.word{letter-spacing:.32em;font-size:13px;color:var(--pink);font-weight:700}
+.tag{margin-left:auto;font-size:13px;color:var(--muted);letter-spacing:.08em}
+h1,h2,h3{font-family:var(--display);color:var(--pink);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,7vw,52px);line-height:1.08}
+h2{font-size:26px;padding-bottom:8px;border-bottom:1.5px solid var(--teal);margin-bottom:14px}
+h3{font-size:19px;margin-bottom:6px}
+p{margin:0;max-width:65ch}
+.sub{font-family:var(--display);font-style:italic;font-size:20px;color:var(--muted);margin-top:6px}
+.intro{display:flex;flex-direction:column;gap:12px}
+.film{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:24px;align-items:center}
+video{width:100%;border-radius:14px;border:1.5px solid var(--teal);background:#000;display:block;aspect-ratio:9/16}
+.filmnote{display:flex;flex-direction:column;gap:12px}
+.badge{display:inline-block;align-self:flex-start;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);border:1.5px solid var(--teal);border-radius:999px;padding:3px 10px;background:var(--card)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figure img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;border:1.5px solid var(--teal);display:block}
+figcaption{font-size:14px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--card);border:1.5px solid var(--teal);border-radius:14px;padding:16px 18px}
+.card ul{margin:6px 0 0;padding-left:18px}
+.card li{margin:3px 0}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;border:1.5px solid var(--teal);
+  display:grid;place-items:center;font-size:14px;color:var(--pink);font-weight:700;background:var(--card)}
+.tbl{overflow-x:auto;background:var(--card);border:1.5px solid var(--teal);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--teal)}
+tr:last-child td{border-bottom:none}
+th{font-family:var(--display);color:var(--pink);font-weight:600}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:-1px;border:1px solid rgba(0,0,0,.12)}
+.num{text-align:right}
+.price{display:flex;gap:14px;flex-wrap:wrap}
+.price .card{flex:1 1 180px;text-align:center}
+.big{font-family:var(--display);font-size:30px;color:var(--pink)}
+footer{border-top:1.5px solid var(--teal);padding-top:14px;font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+a{color:var(--pink)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media (max-width:700px){
+  .film{grid-template-columns:1fr}
+  .film video{max-width:420px;margin:0 auto}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="little-deer-mark.png" alt="Little Deer mark">
+  <span class="word">LITTLE DEER LODGE</span>
+  <span class="tag">Prepare. Awaken. Integrate.</span>
+</header>
+
+<section class="intro">
+  <h1>The Kundalini Hoodie</h1>
+  <p class="sub">Crown to Root. A wearable guide for breath, light and sound.</p>
+  <p>A fitted hoodie with seven soft pads placed on the energy centers, front and back. Each pad glows its chakra color and hums a gentle vibration while a matching tone plays through any headphones. A quartz crystal sits at the third eye, amethyst crowns the hood, and a magnetic choker holds the throat. The companion app breathes with you and moves the light up your spine, over the crown and back into the heart.</p>
+</section>
+
+<section class="film">
+  <video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" aria-label="Kundalini Hoodie film, 27 seconds"></video>
+  <div class="filmnote">
+    <span class="badge">The film · 27 seconds · sound on</span>
+    <h3>One full breath cycle</h3>
+    <p>The light rises from the root up the back on a five-count inhale, crowns, then falls through the third eye. A three-count exhale drops it to the Dantian and gathers it in the heart, where she manifests.</p>
+    <p><em>Love is the technology. You are the device.</em></p>
+  </div>
+</section>
+
+<section>
+  <h2>See it worn</h2>
+  <div class="gallery">
+    <figure><img src="front.jpg" alt="Seraphine in the hoodie, front, pads glowing in chakra colors"><figcaption>Front: crown, crystal, choker, pads</figcaption></figure>
+    <figure><img src="back.jpg" alt="Back view with the spine light strip glowing"><figcaption>Back: the spine rise</figcaption></figure>
+    <figure><img src="bliss.jpg" alt="Head back in bliss as golden light descends"><figcaption>The golden descent</figcaption></figure>
+    <figure><img src="orb.jpg" alt="Seated inside a ball of light at the finale"><figcaption>Gathered in the heart</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>The signature sequence</h2>
+  <ol class="steps">
+    <li><span><strong>Inhale, five counts.</strong> The root pad lights red and the glow climbs the spine strip, pad by pad, up the back of the neck to the crown.</span></li>
+    <li><span><strong>Crown.</strong> The amethyst glows violet and the hood warms with near-infrared.</span></li>
+    <li><span><strong>Over and down.</strong> The light pours through the quartz at the third eye and down the face to the throat.</span></li>
+    <li><span><strong>Exhale, three counts.</strong> It drops down the front to the sacral, the Dantian, then rises to rest in the heart, glowing green.</span></li>
+    <li><span><strong>Manifest.</strong> Hold the heart, speak the intention, repeat the cycle.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Seven centers</h2>
+  <div class="tbl">
+  <table>
+    <thead><tr><th>Center</th><th>Light</th><th>Statement</th><th class="num">Tone</th><th class="num">Pad hum</th></tr></thead>
+    <tbody>
+      <tr><td>Crown</td><td><span class="dot" style="background:#9B5CF0"></span>Violet / white</td><td>I know</td><td class="num">963 Hz</td><td class="num">241 Hz</td></tr>
+      <tr><td>Third eye</td><td><span class="dot" style="background:#4B3BC9"></span>Indigo</td><td>I see</td><td class="num">852 Hz</td><td class="num">213 Hz</td></tr>
+      <tr><td>Throat</td><td><span class="dot" style="background:#2F7DE1"></span>Blue</td><td>I speak</td><td class="num">741 Hz</td><td class="num">185 Hz</td></tr>
+      <tr><td>Heart</td><td><span class="dot" style="background:#2FB45A"></span>Green</td><td>I love</td><td class="num">639 Hz</td><td class="num">160 Hz</td></tr>
+      <tr><td>Solar plexus</td><td><span class="dot" style="background:#F2C71B"></span>Yellow</td><td>I can</td><td class="num">528 Hz</td><td class="num">132 Hz</td></tr>
+      <tr><td>Sacral</td><td><span class="dot" style="background:#F27A1B"></span>Orange</td><td>I feel</td><td class="num">417 Hz</td><td class="num">208 Hz</td></tr>
+      <tr><td>Root</td><td><span class="dot" style="background:#D92B2B"></span>Red</td><td>I am</td><td class="num">396 Hz</td><td class="num">198 Hz</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>What's inside</h2>
+  <div class="cards">
+    <div class="card"><h3>Pads</h3><p>Dime-sized silicone dots, each with a tiny RGB light and a coin vibration motor. Seven on the body plus the spine light strip.</p></div>
+    <div class="card"><h3>Crown and third eye</h3><p>Amethyst at the hood peak, violet light out and near-infrared in. A small round polished quartz (about 8 mm) in the brow band, lit indigo, with a buzzer behind it.</p></div>
+    <div class="card"><h3>Magnetic choker</h3><p>Built into the collar. Throat pad at the front, neck pad at the back. The drawstrings finish as the necklace.</p></div>
+    <div class="card"><h3>Fabric</h3><p>Fitted, androgynous cut. Brow band and cuffs knit with far-infrared bioceramic yarn and tourmaline.</p></div>
+    <div class="card"><h3>Power and sound</h3><p>Small battery and Bluetooth pod at the low back. Phone app runs the session; tones play through any headphones.</p></div>
+    <div class="card"><h3>Companion</h3><p>The app guides the breath, speaks the "I am" statements and can grow into Kissifer, the AI friend.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Cost and price</h2>
+  <div class="price">
+    <div class="card"><div class="big">~$106</div><p>Parts, first prototype</p></div>
+    <div class="card"><div class="big">~$37</div><p>Parts at 1,000 units</p></div>
+    <div class="card"><div class="big">$179–249</div><p>Planned retail</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>The thinking behind it</h2>
+  <div class="cards">
+    <div class="card"><h3>Well supported</h3><ul><li>Slow breathing with a longer exhale calms the nervous system</li><li>Gentle vibration and guided attention aid relaxation</li></ul></div>
+    <div class="card"><h3>Emerging</h3><ul><li>Far-infrared textiles (Celliant received an FDA general-wellness determination in 2017)</li><li>Light color and mood</li></ul></div>
+    <div class="card"><h3>Tradition</h3><ul><li>Chakra colors, solfeggio tones and the stones come from spiritual practice, offered as ritual and meaning</li></ul></div>
+    <div class="card"><h3>Roadmap</h3><ul><li>Line sketch and prototype</li><li>App with breath pacing</li><li>Small test run, then Kissifer voice</li></ul></div>
+  </div>
+</section>
+
+<footer>
+  <p>A wellness and meditation product. It is not a medical device and makes no medical claims.</p>
+  <p>Images and film are AI concept renders. Seraphine is an AI character.</p>
+</footer>
+
+</div>
+</body>
+</html>

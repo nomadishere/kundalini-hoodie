@@ -38,7 +38,7 @@ h3{font-size:20px}
 p{margin:0}
 .eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:700}
 .rule{height:1.5px;background:var(--teal);border:0;margin:0}
-section{padding:64px 0}
+section{padding:64px 0;scroll-margin-top:72px}
 .sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;max-width:640px}
 .sec-head p{color:var(--muted)}
 
@@ -144,7 +144,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 @media (max-width:760px){
   section{padding:48px 0}
   .hero .wrap,.film .wrap,.ladder,.offer{grid-template-columns:1fr}
-  .hero-img{order:-1}
+  .hero-img img{aspect-ratio:4/3;object-position:50% 35%}
   .film video{max-width:420px;margin:0 auto}
   .three,.mats{grid-template-columns:1fr}
   .colors{grid-template-columns:1fr 1fr}
@@ -161,27 +161,18 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <nav aria-label="Main">
   <div class="wrap">
     <span class="logo">gl<span class="o">o</span>hood</span>
-    <a class="btn btn-pink" href="#reserve">Join the waitlist</a>
+    <a class="btn btn-pink" href="#reserve" data-cta="nav">Reserve mine free</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">glohood · Crown to Root</span>
-      <h1>Wear the breath that lights you up.</h1>
-      <p class="lead">Seven glowing pads, healing tones and a gentle hum guide one sacred breath from the base of your spine to the crown of your head, and back into your heart.</p>
-      <div class="chips">
-        <span class="chip">Chakra-color light</span>
-        <span class="chip">Solfeggio tones</span>
-        <span class="chip">Soft vibration</span>
-        <span class="chip">Quartz &amp; amethyst</span>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-pink" href="#reserve">Reserve founding price</a>
-        <a class="btn btn-line" href="#film">Watch the film</a>
-      </div>
-      <p class="price-note"><strong>$179 founding price</strong> for the waitlist · $249 at launch</p>
+      <span class="eyebrow">The glowing meditation hoodie</span>
+      <h1>A hoodie that glows, hums and breathes with you.</h1>
+      <p class="lead">Seven light pads walk your breath from root to crown in 10 minutes. Works with your phone and any headphones.</p>
+      <div class="cta-row"><a class="btn btn-pink" href="#reserve" data-cta="hero">Reserve mine free</a></div>
+      <p class="price-note">No card needed · <strong>$179 founding price</strong> · $249 at launch</p>
     </div>
     <div class="hero-img">
       <img src="c-midnight.jpg" alt="Seraphine meditating in the Midnight glohood, pads glowing in chakra colors">
@@ -326,11 +317,11 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       </ul>
     </div>
     <div class="card">
-      <h3>Join the waitlist</h3>
+      <h3>Reserve yours free</h3>
       <form id="wl" novalidate>
         <div class="field"><label for="wl-name">First name</label><input id="wl-name" name="name" autocomplete="given-name" maxlength="100"></div>
         <div class="field"><label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@example.com"></div>
-        <button class="btn btn-pink" type="submit" id="wl-btn">Save my spot</button>
+        <button class="btn btn-pink" type="submit" id="wl-btn" data-cta="form">Reserve mine free</button>
         <p class="msg" id="wl-msg" role="status"></p>
       </form>
       <p style="font-size:14px;color:var(--muted)">No payment now. We'll only email you about glohood.</p>
@@ -373,7 +364,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       f.reset();m.textContent="You're on the list. Watch your inbox for first access.";m.className='msg ok';
     }).catch(function(){
       m.textContent="That didn't go through. Check your connection and try again.";m.className='msg err';
-    }).finally(function(){b.disabled=false;b.textContent='Save my spot';});
+    }).finally(function(){b.disabled=false;b.textContent='Reserve mine free';});
   });
 })();
 </script>

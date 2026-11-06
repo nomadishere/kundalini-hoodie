@@ -4,191 +4,188 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>glohood</title>
-<meta name="description" content="A hoodie that guides your breath with light, sound and gentle vibration, from root to crown.">
-<meta property="og:title" content="glohood: wear your glow">
-<meta property="og:description" content="Seven glowing pads. Healing tones. One breath that carries light from root to crown.">
+<meta name="description" content="The Sacred Circuit: a breath, lock and energy practice guided by light, sound and vibration, built into a hoodie.">
+<meta property="og:title" content="glohood · The Sacred Circuit">
+<meta property="og:description" content="Every breath moves the fluid around your brain and spine. Learn to move it on purpose.">
 <meta property="og:image" content="https://glohood.com/c-midnight.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Carlito:wght@400;700&family=Nunito:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --pink:#DA34C9; --pink-deep:#B5229F;
-  --teal:#40E0D0;
-  --ink:#33272F; --muted:#76646E;
-  --card:#FFFAF8; --bg1:#FBEFF3; --bg2:#FAEBDD;
-  --night:#1C1420;
-  --display:"Lora", Georgia, "Times New Roman", serif;
-  --body:"Carlito", Calibri, "Segoe UI", Arial, sans-serif;
-  color-scheme: light;
-  /* layout: blush sales page, one column on phones; hero split on wide screens; one dark band for the film */
+  --night:#0D0A14; --night2:#151020; --card:#1A1426;
+  --violet:#B98BFF; --violet-deep:#9B6BFF;
+  --gold:#E9C77B; --text:#EEE6F5; --muted:#A99BB8; --line:rgba(185,139,255,.22);
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Inter", "Segoe UI", Arial, sans-serif;
+  color-scheme: dark;
+  /* layout: one narrow column on phones, two columns on wide screens; z-index ladder: content 1 < nav 10 */
 }
 *{box-sizing:border-box}
-html{background:var(--bg1);scroll-behavior:smooth}
+html{background:var(--night);scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;font-family:var(--body);color:var(--ink);font-size:18px;line-height:1.55;background:linear-gradient(180deg,var(--bg1),var(--bg2) 60%,var(--bg1))}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6}
 img,video{max-width:100%;display:block}
-a{color:var(--pink)}
-:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+a{color:var(--violet)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);color:var(--pink);font-weight:600;text-wrap:balance;margin:0}
-h1{font-size:clamp(38px,7vw,64px);line-height:1.05}
-h2{font-size:clamp(28px,4.5vw,40px);line-height:1.12}
-h3{font-size:20px}
+section{padding:72px 0;scroll-margin-top:70px}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1,h2{font-family:var(--display);font-style:italic;font-weight:600;color:#fff;line-height:1.05}
+h1{font-size:clamp(42px,7vw,72px)}
+h2{font-size:clamp(34px,5vw,52px)}
+h1 em,h2 em{color:var(--violet);text-shadow:0 0 28px rgba(185,139,255,.55)}
+h3{font-size:18px;font-weight:600;color:#fff}
 p{margin:0}
-.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:700}
-.rule{height:1.5px;background:var(--teal);border:0;margin:0}
-section{padding:64px 0;scroll-margin-top:72px}
-.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;max-width:640px}
-.sec-head p{color:var(--muted)}
+.eye{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.muted{color:var(--muted)}
+.head{display:flex;flex-direction:column;gap:14px;max-width:680px;margin-bottom:34px}
+.head p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:var(--body)}
+.btn-glow{background:linear-gradient(90deg,var(--violet-deep),#C79BFF);color:var(--night);box-shadow:0 0 32px rgba(155,107,255,.45)}
+.btn-glow:hover{filter:brightness(1.08)}
+.btn-gold{border:1px solid var(--gold);color:var(--gold);background:transparent;min-height:42px;padding:0 18px;font-size:15px}
+.micro{font-size:14px;color:var(--muted)}
+.micro b{color:var(--gold);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card p{color:var(--muted);font-size:16px}
 
 /* nav */
-nav{position:sticky;top:0;z-index:10;background:rgba(251,239,243,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1.5px solid var(--teal)}
-nav .wrap{display:flex;align-items:center;gap:12px;min-height:60px}
-.logo{font-family:"Nunito",var(--body);font-weight:900;font-size:30px;letter-spacing:-.02em;color:var(--ink);line-height:1}
-.logo .o{color:#B98BFF;text-shadow:0 0 12px rgba(185,139,255,.9)}
-.word{letter-spacing:.3em;font-size:12px;color:var(--pink);font-weight:700;white-space:nowrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:var(--body)}
-.btn-pink{background:var(--pink);color:#fff;box-shadow:0 8px 24px rgba(218,52,201,.28)}
-.btn-pink:hover{background:var(--pink-deep)}
-.btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--teal)}
-.btn-line:hover{background:var(--card)}
-nav .btn{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px}
+nav{position:sticky;top:0;z-index:10;background:rgba(13,10,20,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:12px}
+.logo{font-weight:800;font-size:28px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.logo .o{color:var(--violet);text-shadow:0 0 14px #B98BFF}
 
 /* hero */
-.hero{padding:44px 0 56px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero{position:relative;overflow:hidden;padding:48px 0 64px}
+.hero:before{content:"";position:absolute;left:30%;top:-80px;width:720px;height:720px;transform:translateX(-50%);background:radial-gradient(circle,rgba(150,100,255,.26),rgba(13,10,20,0) 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .hero-copy{display:flex;flex-direction:column;gap:18px}
-.hero-copy .lead{font-size:20px;color:var(--muted);max-width:30em}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.price-note{font-size:15px;color:var(--muted)}
-.price-note strong{color:var(--ink)}
-.hero-img{position:relative}
-.hero-img img{border-radius:22px;border:1.5px solid var(--teal);aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:0 30px 60px rgba(90,40,80,.18)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:14px;border:1.5px solid var(--teal);border-radius:999px;padding:4px 12px;background:var(--card)}
+.hero-copy .lead{font-size:19px;color:var(--muted);max-width:34em}
+.hero-img img{border-radius:24px;border:1px solid rgba(233,199,123,.35);aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;width:100%;box-shadow:0 30px 80px rgba(120,80,220,.25)}
 
-/* film band */
-.film{background:var(--night);color:#F5E9EF;border-top:1.5px solid var(--teal);border-bottom:1.5px solid var(--teal)}
-.film .wrap{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:48px;align-items:center}
-.film video{width:100%;aspect-ratio:9/16;border-radius:18px;border:1.5px solid var(--teal);background:#000}
-.film h2{color:#F7B6EE}
-.film .sec-head p{color:#CDBBC6}
-.film blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:26px;line-height:1.3;color:#fff;border-left:2px solid var(--teal);padding-left:18px}
+/* film */
+.film{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.film .wrap{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:48px;align-items:center}
+.film video{width:100%;aspect-ratio:9/16;border-radius:20px;border:1px solid rgba(233,199,123,.35);background:#000}
+blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:28px;line-height:1.25;color:#fff;border-left:2px solid var(--gold);padding-left:18px}
 
-/* benefits */
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--card);border:1.5px solid var(--teal);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
-.card p{color:var(--muted);font-size:17px}
-.icon{width:44px;height:44px}
+/* poem */
+.poem{text-align:left}
+.poem .lines{font-family:var(--display);font-style:italic;font-size:clamp(26px,4vw,36px);line-height:1.35;color:#fff;max-width:720px;display:flex;flex-direction:column;gap:4px}
+.poem .lines span.dim{color:var(--muted)}
+.poem .lines .last{color:var(--violet);margin-top:18px;text-shadow:0 0 22px rgba(185,139,255,.5)}
 
-/* gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-figure{margin:0;display:flex;flex-direction:column;gap:8px}
-figure img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:16px;border:1.5px solid var(--teal)}
-figcaption{font-size:15px;color:var(--muted)}
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.steps li{counter-increment:s}
+.steps .card:before{content:counter(s);width:36px;height:36px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-weight:600}
+.path{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.path .card{border-color:rgba(233,199,123,.3)}
+.path .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
 
-.colors{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.colors img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1.5px solid var(--teal)}
-.colors figcaption{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);font-size:16px}
-.sw{width:16px;height:16px;border-radius:50%;border:1.5px solid rgba(0,0,0,.25);flex:none}
-/* session steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
-.steps li{counter-increment:s;background:var(--card);border:1.5px solid var(--teal);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px;font-size:16px;color:var(--muted)}
-.steps li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-weight:700}
-.steps strong{color:var(--ink);font-size:18px}
+/* locks */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cue{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.cue div{border:1px solid var(--line);border-radius:16px;padding:14px;font-size:15px;color:var(--muted)}
+.cue b{display:block;color:#fff;font-weight:600;margin-bottom:2px}
 
-/* chakra ladder */
-.ladder{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.centers{list-style:none;margin:0;padding:0;border:1.5px solid var(--teal);border-radius:18px;background:var(--card);overflow:hidden}
-.centers li{display:grid;grid-template-columns:22px 1fr auto;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--teal)}
+/* science */
+.sci{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.sci .stat{font-family:var(--display);font-style:italic;font-size:40px;line-height:1;color:var(--violet)}
+.src{font-size:13px;color:var(--muted)}
+.src a{color:var(--muted)}
+
+/* chakras */
+.centers{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.centers li{display:grid;grid-template-columns:20px 1fr auto;gap:14px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line)}
 .centers li:last-child{border-bottom:0}
-.dot{width:16px;height:16px;border-radius:50%;box-shadow:0 0 12px 3px var(--c);background:var(--c)}
-.cname{font-weight:700}
-.iam{font-family:var(--display);font-style:italic;color:var(--muted);margin-left:8px}
-.hz{font-variant-numeric:tabular-nums;color:var(--muted);font-size:16px;white-space:nowrap}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 14px 3px var(--c)}
+.iam{font-family:var(--display);font-style:italic;color:var(--muted);margin-left:8px;font-size:19px}
+.hz{color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 
-/* materials */
+/* colors / gallery */
+.colors{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.colors img,.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--line)}
+figcaption{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--text);font-weight:500}
+.sw{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.4);flex:none}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
 .mats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
 /* offer */
-.offer{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
-.offer .card{padding:28px;gap:14px}
-.big{font-family:var(--display);font-size:52px;line-height:1;color:var(--pink)}
-.strike{text-decoration:line-through;color:var(--muted);font-size:22px;margin-left:10px}
-.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.ticks li{display:grid;grid-template-columns:22px 1fr;gap:8px}
-.ticks li::before{content:"";width:12px;height:12px;margin-top:7px;border-radius:50%;border:2px solid var(--teal)}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.big{font-family:var(--display);font-style:italic;font-size:60px;line-height:1;color:#fff}
+.strike{text-decoration:line-through;color:var(--muted);font-size:24px;margin-left:10px;font-family:var(--body);font-style:normal}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;color:var(--text)}
+.ticks li{display:grid;grid-template-columns:20px 1fr;gap:8px}
+.ticks li:before{content:"";width:10px;height:10px;margin-top:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
 form{display:flex;flex-direction:column;gap:12px}
-label{font-weight:700;font-size:15px}
-input{font:inherit;font-size:17px;min-height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--teal);background:#fff;color:var(--ink);width:100%}
+label{font-weight:600;font-size:15px}
+input{font:inherit;font-size:17px;min-height:50px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:#0F0B17;color:var(--text);width:100%}
+input:focus{border-color:var(--violet)}
 .field{display:flex;flex-direction:column;gap:6px}
 .msg{min-height:24px;font-size:16px}
-.msg.ok{color:#18806F}.msg.err{color:#B3261E}
+.msg.ok{color:#9BE7B0}.msg.err{color:#FF9B9B}
 
 /* faq */
-details{background:var(--card);border:1.5px solid var(--teal);border-radius:14px;padding:16px 18px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
 details+details{margin-top:10px}
-summary{cursor:pointer;font-weight:700;font-size:18px}
+summary{cursor:pointer;font-weight:600}
 details p{margin-top:10px;color:var(--muted)}
 
-footer{border-top:1.5px solid var(--teal);padding:28px 0 48px;font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 @media (max-width:900px){
   .steps{grid-template-columns:1fr 1fr}
-  .gallery{grid-template-columns:1fr 1fr}
   .colors{grid-template-columns:repeat(3,1fr)}
   .mats{grid-template-columns:1fr 1fr}
+  .cue{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
-  section{padding:48px 0}
-  .hero .wrap,.film .wrap,.ladder,.offer{grid-template-columns:1fr}
-  .hero-img img{aspect-ratio:4/3;object-position:50% 35%}
-  .film video{max-width:420px;margin:0 auto}
-  .three,.mats{grid-template-columns:1fr}
+  section{padding:56px 0}
+  .hero{padding-top:30px}
+  .hero .wrap,.film .wrap,.split,.offer,.two,.sci,.path{grid-template-columns:1fr}
+  .hero-img img{aspect-ratio:4/3}
+  .film video{max-width:400px;margin:0 auto}
   .colors{grid-template-columns:1fr 1fr}
-  .word{display:none}
+  .gallery{grid-template-columns:1fr 1fr}
+  .mats,.steps{grid-template-columns:1fr}
 }
-@media (max-width:420px){
-  .steps{grid-template-columns:1fr}
-  .cta-row .btn{flex:1 1 100%}
-}
+@media (max-width:420px){ .btn-glow{width:100%} }
 </style>
 </head>
 <body>
 
 <nav aria-label="Main">
   <div class="wrap">
-    <span class="logo">gl<span class="o">o</span>hood</span>
-    <a class="btn btn-pink" href="#reserve" data-cta="nav">Reserve mine free</a>
+    <a class="logo" href="#top">gl<span class="o">o</span>hood</a>
+    <a class="btn btn-gold" href="#reserve" data-cta="nav">Reserve free</a>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">The glowing meditation hoodie</span>
-      <h1>A hoodie that glows, hums and breathes with you.</h1>
-      <p class="lead">Seven light pads walk your breath from root to crown in 10 minutes. Works with your phone and any headphones.</p>
-      <div class="cta-row"><a class="btn btn-pink" href="#reserve" data-cta="hero">Reserve mine free</a></div>
-      <p class="price-note">No card needed · <strong>$179 founding price</strong> · $249 at launch</p>
+      <span class="eye">The Sacred Circuit</span>
+      <h1>Every breath moves the fluid around your brain and spine. <em>Learn to move it on purpose.</em></h1>
+      <p class="lead">They sold you pieces. This is the whole practice, guided by light, sound and touch: up the spine, over the skull, down the front of the body into the sacral, then back up and out through the heart. Ten minutes to feel turned on by being alive.</p>
+      <div><a class="btn btn-glow" href="#reserve" data-cta="hero">Reserve my glohood, free</a></div>
+      <p class="micro">No card needed · <b>$179 founding price</b> · $249 at launch</p>
     </div>
-    <div class="hero-img">
-      <img src="c-midnight.jpg" alt="Seraphine meditating in the Midnight glohood, pads glowing in chakra colors">
-    </div>
+    <div class="hero-img"><img src="c-midnight.jpg" alt="A woman meditating in a midnight glohood, pads glowing in chakra colors"></div>
   </div>
 </header>
 
 <section class="film" id="film">
   <div class="wrap">
     <video src="film.mp4" poster="poster.jpg" controls playsinline preload="metadata" aria-label="glohood film, 27 seconds"></video>
-    <div>
-      <div class="sec-head">
-        <span class="eyebrow" style="color:#F5E9EF">The film · 27 seconds · sound on</span>
-        <h2>One breath. Root to crown.</h2>
-        <p>Inhale for five and the light rises up the spine, center by center. It crowns, then pours down through the third eye. Exhale for three and it gathers in the heart, where you set your intention.</p>
-      </div>
+    <div class="head" style="margin:0">
+      <span class="eye">Watch one breath · 27 sec · sound on</span>
+      <h2>One breath. <em>The whole circuit.</em></h2>
+      <p>The light rises up the back, crowns, pours down the front and gathers in the belly. On the exhale it rises again and leaves through the heart.</p>
       <blockquote>Love is the technology.<br>You are the device.</blockquote>
     </div>
   </div>
@@ -196,123 +193,203 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 <section>
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">What you feel</span>
-      <h2>Light you can see, sound you can hear, a hum you can feel.</h2>
+    <div class="head">
+      <span class="eye">Ancient. Unedited.</span>
+      <h2>They sold you pieces. <em>This is the whole circuit.</em></h2>
+      <p>Kundalini, tantra, tummo, the microcosmic orbit. Four names for parts of one practice. Over the last fifty years it was split up, rebranded and sold by the piece, and too often taught by people who used it to gain money, sex and control over their students.</p>
     </div>
-    <div class="three">
+    <div class="two">
       <div class="card">
-        <svg class="icon" viewBox="0 0 44 44" fill="none" stroke="#40E0D0" stroke-width="2"><path d="M6 22c5-9 11-9 16 0s11 9 16 0"/><path d="M6 30c5-9 11-9 16 0s11 9 16 0" opacity=".5"/></svg>
-        <h3>Breathe</h3>
-        <p>The app paces you: five counts in, three counts out. The light moves with your breath, so your mind has somewhere beautiful to rest.</p>
+        <h3>What went wrong</h3>
+        <p>The best-known case is the man who brought "Kundalini Yoga" to the West. In 2020 an independent investigation found it "more likely than not" that Yogi Bhajan engaged in sexual misconduct and abused his power as a spiritual leader. <a href="https://www.santafenewmexican.com/news/local_news/hbo-series-spotlights-prot-g-of-tarnished-yogi-bhajan-and-yoga-movement-with-ties-to/article_7bfda452-8fc3-11ef-a1c3-032b5a0cd4fe.html" target="_blank" rel="noopener">Read the coverage</a>.</p>
       </div>
       <div class="card">
-        <svg class="icon" viewBox="0 0 44 44" fill="none" stroke="#40E0D0" stroke-width="2"><circle cx="22" cy="22" r="7"/><path d="M22 4v6M22 34v6M4 22h6M34 22h6M9 9l4 4M31 31l4 4M35 9l-4 4M13 31l-4 4"/></svg>
-        <h3>Glow</h3>
-        <p>Seven pads light in their chakra colors, red at the root through violet at the crown, rising in order as you breathe.</p>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 44 44" fill="none" stroke="#40E0D0" stroke-width="2"><circle cx="22" cy="22" r="4"/><circle cx="22" cy="22" r="10" opacity=".7"/><circle cx="22" cy="22" r="16" opacity=".4"/></svg>
-        <h3>Hum</h3>
-        <p>Each pad vibrates softly at its own pitch while the matching tone plays in any headphones you already own.</p>
+        <h3>Who got it right</h3>
+        <p>Swami Dhirendra Brahmachari, whose book <em>Yogic Sukshma Vyayama</em> kept the practice whole, and Mantak Chia, who taught the Taoist microcosmic orbit and what tantra really is. These are the roots of the Sacred Circuit.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0" id="colors">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Five colors</span>
-      <h2>Pick your glow.</h2>
-      <p>Every color has the same seven pads, quartz third eye and amethyst crown, with a small glohood stitched on the chest.</p>
+<section id="teacher" style="padding-top:0">
+  <div class="wrap split">
+    <div class="head" style="margin:0">
+      <span class="eye">The teacher behind the teacher</span>
+      <h2>The book that <em>changed everything.</em></h2>
+      <p>Here's the twist. Swami Dhirendra Brahmachari (1924–1994) is widely reported to have been a teacher of Yogi Bhajan, the man who took "Kundalini Yoga" to the West. The student built an empire. The teacher wrote it all down.</p>
+      <p>Dhirendra taught yoga to India's prime minister, Indira Gandhi, and brought it to millions on a weekly national TV show in the late 1970s and early '80s. His book <em>Yogic Sukshma Vyayama</em> ("subtle exercise"), first published in 1956, lays out 48 small movements of the joints, spine, neck, eyes and breath, each one timed to an inhale or exhale.</p>
+      <p>It's the book that changed Justin's life, and its spine and head movements are part of every glohood session.</p>
     </div>
-    <div class="colors">
-      <figure><img src="c-midnight.jpg" alt="Midnight glohood"><figcaption><span class="sw" style="background:#16131A"></span>Midnight</figcaption></figure>
-      <figure><img src="c-blush.jpg" alt="Blush glohood"><figcaption><span class="sw" style="background:#E7B9B6"></span>Blush</figcaption></figure>
-      <figure><img src="c-lavender.jpg" alt="Lavender glohood"><figcaption><span class="sw" style="background:#D9C6E8"></span>Lavender</figcaption></figure>
-      <figure><img src="c-sage.jpg" alt="Sage glohood"><figcaption><span class="sw" style="background:#A9BFA0"></span>Sage</figcaption></figure>
-      <figure><img src="c-bone.jpg" alt="Bone glohood"><figcaption><span class="sw" style="background:#EFE6D6"></span>Bone</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">See it worn</span>
-      <h2>Made for the ritual.</h2>
-    </div>
-    <div class="gallery">
-      <figure><img src="front.jpg" alt="Front view with crown, crystal, choker and pads"><figcaption>Crown, crystal, choker</figcaption></figure>
-      <figure><img src="back.jpg" alt="Back view with seven pads glowing up the spine"><figcaption>The spine, lit</figcaption></figure>
-      <figure><img src="bliss.jpg" alt="Head back in bliss under a golden halo"><figcaption>The golden descent</figcaption></figure>
-      <figure><img src="orb.jpg" alt="Seated inside a ball of light at the heart"><figcaption>Gathered in the heart</figcaption></figure>
+    <div class="card" style="gap:14px">
+      <span class="eye">From the book, in every session</span>
+      <ul class="ticks">
+        <li>Neck and head movements timed to the breath</li>
+        <li>Slow waves of the spine to open the channel</li>
+        <li>Eye movements that train the upward gaze</li>
+        <li>Joint-by-joint warm-ups so energy can move freely</li>
+      </ul>
+      <p class="src">Yogic Sukshma Vyayama, Dhirendra Brahmachari (1956; later editions Indian Book Company, 1970s).</p>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="poem">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">A session</span>
-      <h2>Ten minutes. Five movements.</h2>
+    <span class="eye">The part of tantra nobody taught you</span>
+    <div class="lines" style="margin-top:18px">
+      <span>Two small muscles. One long breath.</span>
+      <span>Up the spine. Over the skull.</span>
+      <span>Down through the face, the chest, the belly, into the sacral.</span>
+      <span class="dim">Tongue up. Jaw loose. Eyes back. Toes curl.</span>
+      <span>Then breathe out, through the heart.</span>
+      <span class="last">You'll know.</span>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <div class="head">
+      <span class="eye">The practice</span>
+      <h2>The whole practice. <em>Nothing held back.</em></h2>
+      <p>Ten minutes, four movements. glohood lights, sounds and gently buzzes each step the whole way through.</p>
     </div>
     <ol class="steps">
-      <li><strong>Rise</strong>Inhale five. The root glows red and the light climbs the spine.</li>
-      <li><strong>Crown</strong>The amethyst lights violet at the top of the hood.</li>
-      <li><strong>Descend</strong>Light pours through the quartz at the third eye and down the face.</li>
-      <li><strong>Gather</strong>Exhale three. It settles in the belly, then rises to the heart.</li>
-      <li><strong>Manifest</strong>Hold the heart, speak your intention, breathe again.</li>
+      <li><div class="card"><h3>Fire breath</h3><p>Fast, rhythmic belly breathing to wake the body and build heat, the way kundalini and tummo practitioners start.</p></div></li>
+      <li><div class="card"><h3>Spine and head</h3><p>Slow waves of the spine and circles of the neck and head, from Dhirendra Brahmachari's subtle exercises, to open the channel.</p></div></li>
+      <li><div class="card"><h3>The pull</h3><p>Lock the root and draw the energy through the full circuit on one long inhale. Release it through the heart on the exhale.</p></div></li>
+      <li><div class="card"><h3>Meditation</h3><p>Sit in the charge. Light, tones and vibration keep guiding your attention through each center.</p></div></li>
     </ol>
+    <div class="path">
+      <div class="card"><span class="tag">Inhale</span><p>From the root, up the spine, over the back of the skull, across the top of the head, down the face, chest and belly, into the sacral.</p></div>
+      <div class="card"><span class="tag">Exhale</span><p>Back up from the sacral and out through the heart, for the good of all.</p></div>
+    </div>
   </div>
 </section>
 
-<section style="padding-top:0">
-  <div class="wrap ladder">
-    <div class="sec-head">
-      <span class="eyebrow">Seven centers</span>
-      <h2>Every center has its color, its tone and its words.</h2>
-      <p>As each pad lights, the companion voice speaks its statement. By the time you reach the crown, you have said who you are seven ways.</p>
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eye">The locks</span>
+      <h2>Two sphincters. <em>Two different jobs.</em></h2>
+      <p>Most Kegel advice treats the pelvic floor as one muscle. The old practices didn't. You learn to squeeze the front and back separately, then together, and pump the energy up through every point of the circuit: the spine, the skull, the face, and down into the belly (the dantian).</p>
+    </div>
+    <div class="two">
+      <div class="card"><h3>The back lock · anal sphincter</h3><p>Known in yoga as ashwini mudra. It grounds the practice and starts the pump at the base of the spine.</p></div>
+      <div class="card"><h3>The front lock · urethral sphincter</h3><p>Known as vajroli or sahajoli. Traditionally used to hold your creative and sexual energy inside and draw it upward instead of spending it.</p></div>
+    </div>
+    <div class="cue">
+      <div><b>Tongue</b>On the roof of the mouth. It closes the circuit.</div>
+      <div><b>Jaw</b>Soft and relaxed through the pull.</div>
+      <div><b>Eyes</b>Rolled up and back toward the crown.</div>
+      <div><b>Toes</b>They often curl on their own.</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <span class="eye">The science</span>
+      <h2>The old masters felt it. <em>MRI scans can now see it.</em></h2>
+      <p>Nobody needs a lab to feel this practice, but the research is catching up with what yogis and Taoist masters described for centuries.</p>
+    </div>
+    <div class="sci">
+      <div class="card"><span class="stat">Inhale</span><h3>Breath drives the fluid around your brain</h3><p>Real-time MRI in healthy adults found that breathing in is the main force moving cerebrospinal fluid. Holding the breath stopped it.</p><span class="src">Dreha-Kulaczewski et al., <a href="https://pubmed.ncbi.nlm.nih.gov/25673843/" target="_blank" rel="noopener">J Neurosci, 2015</a></span></div>
+      <div class="card"><span class="stat">Up the spine</span><h3>A strong inhale pushes it up your spine</h3><p>Forced inhalation moved spinal fluid upward toward the head, measured in the spinal canal and the brain.</p><span class="src">Dreha-Kulaczewski et al., <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6596847" target="_blank" rel="noopener">J Neurosci, 2017</a></span></div>
+      <div class="card"><span class="stat">38.3°C</span><h3>Tibetan nuns raise their body heat with breath</h3><p>During forceful-breath tummo in freezing cold, meditators raised their body temperature to a mild fever. Beginners raised theirs within normal range.</p><span class="src">Kozhevnikov et al., <a href="https://doi.org/10.1371/journal.pone.0058244" target="_blank" rel="noopener">PLOS ONE, 2013</a></span></div>
+      <div class="card"><span class="stat">Light + sound</span><h3>Why the hoodie glows and hums</h3><p>Attention follows what you see, hear and feel. Light, tone and vibration at each center give your mind a clear place to go, so you stay with the circuit instead of your thoughts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="head" style="margin:0">
+      <span class="eye">Seven centers</span>
+      <h2>Every center has its color, <em>its tone and its words.</em></h2>
+      <p>The chakras are an old map of the body. Many teachers line them up with the major nerve clusters along the spine. As each pad lights, its tone plays and the voice speaks its words.</p>
+      <p>The traditions say this practice deepens meditation, sharpens the senses and, over time, opens intuition and psychic ability. Your experience is your own.</p>
     </div>
     <ul class="centers">
-      <li><span class="dot" style="--c:#B98BFF"></span><span><span class="cname">Crown</span><span class="iam">I know</span></span><span class="hz">963 Hz</span></li>
-      <li><span class="dot" style="--c:#6E6BFF"></span><span><span class="cname">Third eye</span><span class="iam">I see</span></span><span class="hz">852 Hz</span></li>
-      <li><span class="dot" style="--c:#3F9CF0"></span><span><span class="cname">Throat</span><span class="iam">I speak</span></span><span class="hz">741 Hz</span></li>
-      <li><span class="dot" style="--c:#35C26A"></span><span><span class="cname">Heart</span><span class="iam">I love</span></span><span class="hz">639 Hz</span></li>
-      <li><span class="dot" style="--c:#F2C71B"></span><span><span class="cname">Solar plexus</span><span class="iam">I can</span></span><span class="hz">528 Hz</span></li>
-      <li><span class="dot" style="--c:#F2861B"></span><span><span class="cname">Sacral</span><span class="iam">I feel</span></span><span class="hz">417 Hz</span></li>
-      <li><span class="dot" style="--c:#E53935"></span><span><span class="cname">Root</span><span class="iam">I am</span></span><span class="hz">396 Hz</span></li>
+      <li><span class="dot" style="--c:#B98BFF"></span><span>Crown<span class="iam">I know</span></span><span class="hz">963 Hz</span></li>
+      <li><span class="dot" style="--c:#6E6BFF"></span><span>Third eye<span class="iam">I see</span></span><span class="hz">852 Hz</span></li>
+      <li><span class="dot" style="--c:#3F9CF0"></span><span>Throat<span class="iam">I speak</span></span><span class="hz">741 Hz</span></li>
+      <li><span class="dot" style="--c:#35C26A"></span><span>Heart<span class="iam">I love</span></span><span class="hz">639 Hz</span></li>
+      <li><span class="dot" style="--c:#F2C71B"></span><span>Solar plexus<span class="iam">I can</span></span><span class="hz">528 Hz</span></li>
+      <li><span class="dot" style="--c:#F2861B"></span><span>Sacral<span class="iam">I feel</span></span><span class="hz">417 Hz</span></li>
+      <li><span class="dot" style="--c:#E53935"></span><span>Root<span class="iam">I am</span></span><span class="hz">396 Hz</span></li>
     </ul>
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eye">Orgasmic living</span>
+      <h2>Your creative and sexual energy <em>was never the problem.</em></h2>
+      <p>It's the same force that builds galaxies and babies and songs. The Sacred Circuit teaches you to build it, hold it and move it through the whole body, then give it away through the heart. People describe feeling warmer, calmer, more creative and more alive. That's the birthright.</p>
+    </div>
+  </div>
+</section>
+
+<section id="colors" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eye">Five colors</span>
+      <h2>Pick your <em>glow.</em></h2>
+    </div>
+    <div class="colors">
+      <figure><img src="c-midnight.jpg" alt="Midnight glohood" loading="lazy"><figcaption><span class="sw" style="background:#16131A"></span>Midnight</figcaption></figure>
+      <figure><img src="c-blush.jpg" alt="Blush glohood" loading="lazy"><figcaption><span class="sw" style="background:#E7B9B6"></span>Blush</figcaption></figure>
+      <figure><img src="c-lavender.jpg" alt="Lavender glohood" loading="lazy"><figcaption><span class="sw" style="background:#D9C6E8"></span>Lavender</figcaption></figure>
+      <figure><img src="c-sage.jpg" alt="Sage glohood" loading="lazy"><figcaption><span class="sw" style="background:#A9BFA0"></span>Sage</figcaption></figure>
+      <figure><img src="c-bone.jpg" alt="Bone glohood" loading="lazy"><figcaption><span class="sw" style="background:#EFE6D6"></span>Bone</figcaption></figure>
+    </div>
+    <div class="gallery">
+      <figure><img src="back.jpg" alt="Back view with seven pads glowing up the spine" loading="lazy"><figcaption>The spine, lit</figcaption></figure>
+      <figure><img src="bliss.jpg" alt="Head tilted back under a golden halo" loading="lazy"><figcaption>The descent</figcaption></figure>
+      <figure><img src="orb.jpg" alt="Seated inside a ball of light" loading="lazy"><figcaption>Out through the heart</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Crafted with intention</span>
-      <h2>Real stones. Soft tech. A fit that holds you.</h2>
+    <div class="head">
+      <span class="eye">Inside the hoodie</span>
+      <h2>Real stones. <em>Soft tech.</em></h2>
     </div>
     <div class="mats">
-      <div class="card"><h3>Amethyst crown</h3><p>Set at the peak of the hood. Glows violet outward, warms with near-infrared inward.</p></div>
+      <div class="card"><h3>Amethyst crown</h3><p>At the peak of the hood. Glows violet outward, warms with near-infrared inward.</p></div>
       <div class="card"><h3>Quartz third eye</h3><p>A small polished round quartz in the brow band, lit indigo, with a gentle hum behind it.</p></div>
-      <div class="card"><h3>Magnetic choker</h3><p>Built into the collar, with the throat pad in front. The drawstrings finish as a necklace.</p></div>
-      <div class="card"><h3>Dime-sized pads</h3><p>Soft silicone dots with a tiny light and a whisper-quiet motor, placed on each center front and back.</p></div>
-      <div class="card"><h3>Infrared yarn</h3><p>The brow band and cuffs are knit with far-infrared bioceramic fiber and tourmaline.</p></div>
-      <div class="card"><h3>Your phone, your headphones</h3><p>The app runs every session over Bluetooth. Any headphones work.</p></div>
+      <div class="card"><h3>Magnetic choker</h3><p>Built into the collar with the throat pad. The drawstrings finish as a necklace.</p></div>
+      <div class="card"><h3>Seven pads</h3><p>Dime-sized silicone dots, each with a tiny light and a whisper-quiet motor, front and back.</p></div>
+      <div class="card"><h3>Infrared yarn</h3><p>Brow band and cuffs knit with far-infrared bioceramic fiber and tourmaline.</p></div>
+      <div class="card"><h3>Phone and any headphones</h3><p>The app runs every session over Bluetooth and plays the tones.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="card" style="gap:14px;max-width:760px">
+      <span class="eye">Made by</span>
+      <h3 style="font-family:var(--display);font-style:italic;font-size:30px;font-weight:600">Justin Walton</h3>
+      <p>Founder of Little Deer Lodge, a healing sanctuary near Yellowstone. A longtime student of kundalini yoga, tantric breathwork, shamanism and meditation, Justin built glohood to teach the Sacred Circuit the way it was meant to be taught: whole, honest, and for the good of all.</p>
     </div>
   </div>
 </section>
 
 <section id="reserve" style="padding-top:0">
   <div class="wrap offer">
-    <div class="card">
-      <span class="eyebrow">Founding offer</span>
+    <div class="card" style="gap:14px">
+      <span class="eye">Founding offer</span>
       <div><span class="big">$179</span><span class="strike">$249</span></div>
-      <p style="color:var(--ink)">Join the waitlist to lock in the founding price when the first run opens.</p>
+      <p style="color:var(--text)">Reserve free to lock in the founding price when the first run opens.</p>
       <ul class="ticks">
-        <li>Your glohood in any of five colors, with all seven pads, crown and crystal</li>
-        <li>The companion app with guided breath sessions</li>
+        <li>glohood in any of five colors, with all seven pads, crown and crystal</li>
+        <li>The Sacred Circuit app with guided sessions</li>
         <li>First access when the first run opens</li>
       </ul>
     </div>
@@ -321,28 +398,29 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       <form id="wl" novalidate>
         <div class="field"><label for="wl-name">First name</label><input id="wl-name" name="name" autocomplete="given-name" maxlength="100"></div>
         <div class="field"><label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@example.com"></div>
-        <button class="btn btn-pink" type="submit" id="wl-btn" data-cta="form">Reserve mine free</button>
+        <button class="btn btn-glow" type="submit" id="wl-btn" data-cta="form">Reserve my glohood, free</button>
         <p class="msg" id="wl-msg" role="status"></p>
       </form>
-      <p style="font-size:14px;color:var(--muted)">No payment now. We'll only email you about glohood.</p>
+      <p class="micro">No payment now. We'll only email you about glohood.</p>
     </div>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="wrap" style="max-width:760px">
-    <div class="sec-head"><span class="eyebrow">Questions</span><h2>Good to know</h2></div>
-    <details><summary>Is it a medical device?</summary><p>No. It's a wellness and meditation tool. It doesn't diagnose, treat or cure anything.</p></details>
-    <details><summary>Do I need special headphones?</summary><p>No. The tones play through the app, so any headphones or earbuds work.</p></details>
-    <details><summary>Does it work without the app?</summary><p>The app runs the breath pacing, light and sound together, so you'll want your phone nearby for a session.</p></details>
-    <details><summary>When does it ship?</summary><p>The first prototype is in development now. Waitlist members hear first, and get the founding price.</p></details>
+    <div class="head"><span class="eye">Questions</span><h2>Good to <em>know</em></h2></div>
+    <details><summary>Is this a medical device?</summary><p>No. glohood is a meditation and wellness tool. It doesn't diagnose, treat or cure anything.</p></details>
+    <details><summary>Is it safe for everyone?</summary><p>The lights pulse and the breathing is strong. If you have epilepsy or light sensitivity, are pregnant, or have a heart or blood-pressure condition, talk to your doctor first, and you can turn the lights off and breathe gently.</p></details>
+    <details><summary>Is this sexual?</summary><p>It works with your creative and sexual energy, the same life force, but the practice is done alone, fully clothed, and its goal is energy, presence and an open heart.</p></details>
+    <details><summary>Do I need special headphones?</summary><p>No. Any headphones or earbuds work with the app.</p></details>
+    <details><summary>When does it ship?</summary><p>The first prototype is in development. Founding members hear first and keep the $179 price.</p></details>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>glohood is a Little Deer Lodge creation. Prepare. Awaken. Integrate.</p>
-    <p>Photos and film are AI concept renders; Seraphine is an AI character. Wellness product only, not a medical device.</p>
+    <p>glohood · The Sacred Circuit · A Little Deer Lodge creation.</p>
+    <p>Photos and film are AI concept renders; the model shown is an AI character. Wellness product only, not a medical device.</p>
   </div>
 </footer>
 
@@ -364,7 +442,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       f.reset();m.textContent="You're on the list. Watch your inbox for first access.";m.className='msg ok';
     }).catch(function(){
       m.textContent="That didn't go through. Check your connection and try again.";m.className='msg err';
-    }).finally(function(){b.disabled=false;b.textContent='Reserve mine free';});
+    }).finally(function(){b.disabled=false;b.textContent='Reserve my glohood, free';});
   });
 })();
 </script>

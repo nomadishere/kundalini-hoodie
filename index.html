@@ -53,6 +53,7 @@ p{margin:0}
 /* nav */
 nav{position:sticky;top:0;z-index:10;background:rgba(13,10,20,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:12px}
+.navr{display:flex;align-items:center;gap:14px}.navr .btn{white-space:nowrap}.navlink{color:var(--text);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.06em;padding:10px 4px}.navlink:hover{color:var(--gold)}.learnlink{display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(233,199,123,.4);padding-bottom:3px}.learnlink:hover{border-color:var(--gold)}
 .logo{font-weight:800;font-size:28px;letter-spacing:-.02em;color:#fff;text-decoration:none}
 .logo .o{color:var(--violet);text-shadow:0 0 14px #B98BFF}
 
@@ -166,7 +167,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <nav aria-label="Main">
   <div class="wrap">
     <a class="logo" href="#top">gl<span class="o">o</span>hood</a>
-    <a class="btn btn-gold" href="#reserve" data-cta="nav">Reserve free</a>
+    <div class="navr"><a class="navlink" href="/learn/">Learn</a><a class="btn btn-gold" href="#reserve" data-cta="nav">Reserve free</a></div>
   </div>
 </nav>
 
@@ -241,6 +242,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
         <li>Joint-by-joint warm-ups</li>
       </ul>
       <p class="src">Yogic Sukshma Vyayama, Dhirendra Brahmachari (1956; later editions Indian Book Company, 1970s).</p>
+      <a class="learnlink" href="/learn/#books">The books behind the practice &rarr;</a>
     </div>
   </div>
 </section>
@@ -315,6 +317,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       <div class="card"><span class="stat">38.3°C</span><h3>Tibetan nuns raise their body heat with breath</h3><p>In freezing cold, tummo meditators raised their body temperature to a mild fever with breath alone.</p><span class="src">Kozhevnikov et al., <a href="https://doi.org/10.1371/journal.pone.0058244" target="_blank" rel="noopener">PLOS ONE, 2013</a></span></div>
       <div class="card"><span class="stat">Light + sound</span><h3>Why the hoodie glows and hums</h3><p>Light, tone and touch give your mind a place to go, so you stay with the circuit.</p></div>
     </div>
+    <a class="learnlink" href="/learn/breath-moves-the-fluid/">Read the full story: Breath moves the fluid around your brain &rarr;</a>
   </div>
 </section>
 
@@ -439,7 +442,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 <footer>
   <div class="wrap">
-    <p>glohood · The Sacred Circuit · A Little Deer Lodge creation.</p>
+    <p>glohood · The Sacred Circuit · A Little Deer Lodge creation. · <a href="/learn/">Learn</a></p>
     <p>Photos and film are AI concept renders; the model shown is an AI character. Wellness product only, not a medical device.</p>
   </div>
 </footer>

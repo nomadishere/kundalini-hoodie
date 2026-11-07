@@ -106,6 +106,7 @@ blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:28px;
 .ill{margin:0 0 34px;max-width:620px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 60px rgba(185,139,255,.12)}
 .ill img{display:block;width:100%;height:auto}
 .split .ill{margin:22px 0 0}
+.inside-vid{padding:10px 0 30px}.inside-vid video{display:block;width:100%;max-width:440px;margin:0 auto;aspect-ratio:9/16;border-radius:24px;border:1px solid rgba(233,199,123,.3);box-shadow:0 30px 80px rgba(120,80,220,.25);background:#07050b}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 
 /* colors / gallery */
@@ -181,6 +182,12 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
     <div class="hero-img"><img src="c-midnight.jpg" alt="A woman meditating in a midnight glohood, pads glowing in chakra colors"></div>
   </div>
 </header>
+
+<section class="inside-vid" aria-label="Inside the glohood">
+  <div class="wrap">
+    <video src="inside.mp4?v=1" poster="inside-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The glohood turning, showing each light and part"></video>
+  </div>
+</section>
 
 <section class="film" id="film">
   <div class="wrap">
@@ -372,7 +379,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
       <span class="eye">Inside the hoodie</span>
       <h2>Real stones. <em>Soft tech.</em></h2>
     </div>
-    <figure class="ill"><img src="ill-hoodie.jpg" alt="The glohood hoodie shown in parts: amethyst crown, quartz, choker, seven pads and phone" loading="lazy" width="960" height="723"></figure>
+    <figure class="ill"><img src="ill-hoodie.jpg?v=4" alt="The glohood hoodie shown in parts: amethyst crown, quartz, choker, seven pads and phone" loading="lazy" width="960" height="723"></figure>
     <div class="mats">
       <div class="card"><h3>Amethyst crown</h3><p>Glows violet outward, warms with near-infrared inward.</p></div>
       <div class="card"><h3>Quartz third eye</h3><p>Polished quartz in the brow band, lit indigo, with a gentle hum.</p></div>

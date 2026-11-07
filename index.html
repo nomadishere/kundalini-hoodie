@@ -476,6 +476,6 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 <script>(function(){var v=document.getElementById('topfilm'),b=document.getElementById('snd'),p=document.getElementById('playbig');if(!v||!b||!p)return;
 p.addEventListener('click',function(){v.muted=false;v.currentTime=0;v.play();p.hidden=true;b.hidden=false});
 v.addEventListener('pause',function(){if(!v.ended&&!v.seeking){}});
-b.addEventListener('click',function(){v.muted=!v.muted;b.classList.toggle('off',v.muted);b.innerHTML=v.muted?'&#128264; Sound on':'&#128266; Sound off';b.setAttribute('aria-pressed',String(!v.muted))})})();</script>
+b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play()}b.classList.toggle('off',v.muted);b.innerHTML=v.muted?'&#128264; Sound on':'&#128266; Sound off';b.setAttribute('aria-pressed',String(!v.muted))})})();</script>
 </body>
 </html>
